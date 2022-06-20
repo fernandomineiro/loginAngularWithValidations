@@ -1,8 +1,10 @@
+
 <mat-toolbar color="primary" class="app-header">
-  <div><a href="#" target="_blank" class="positronx">Demo</a></div>
+  <div><a href="#" target="_blank" class="positronx">Meu sistema</a></div>
   <span class="nav-tool-items">
-    <a mat-button routerLink="signin" routerLinkActive="active">Signin</a>
-    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Signup</a>
+    <a *ngIf="!answer" mat-button routerLink="signin" routerLinkActive="active">Login</a>
+    <a *ngIf="!answer" mat-button mat-raised-button routerLink="register" routerLinkActive="active">Registrar</a>
+    <a *ngIf="answer" mat-button (click)="logout()" routerLinkActive="active">Sair</a>
   </span>
 </mat-toolbar>
 

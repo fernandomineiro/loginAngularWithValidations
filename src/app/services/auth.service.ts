@@ -8,7 +8,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     let verify = sessionStorage.getItem("loginTeste");
-    if (!verify) {
+    if (verify) {
+      return true;
+    } else {
       return false;
     }
   }
